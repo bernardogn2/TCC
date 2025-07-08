@@ -1,15 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:robolearn/view/class_page.dart';
-import 'package:robolearn/view/component_page.dart';
+import 'package:robolearn/view/componentdetail_page.dart';
 import 'package:robolearn/view/config_page.dart';
 import 'package:robolearn/view/dictionary_page.dart';
+import 'package:robolearn/view/editprofile_page.dart';
 import 'package:robolearn/view/exercise_page.dart';
 import 'package:robolearn/view/login_page.dart';
 import 'package:robolearn/view/profile_page.dart';
 import 'package:robolearn/view/register_page.dart';
 import 'package:robolearn/view/home_page.dart';
-import 'package:robolearn/view/teste_page.dart';
 
 import 'firebase_options.dart';
 
@@ -37,12 +37,12 @@ class RoboLearnApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/register': (context) => RegisterPage(),
         '/dictionary': (context) => DictionaryPage(),
-        '/component': (context) => ComponentPage(),
-        '/class': (context) => ClassPage(),
-        '/exercise': (context) => ExercisePage(),        
+        //'/component': (context) => ComponentDetailPage(),
+        '/class': (context) => ClassPage(moduleType: '',),
+        '/exercise': (context) => ActivityPage(),        
         '/profile': (context) => ProfilePage(),
         '/config': (context) => ConfigPage(),
-        '/teste': (context) => teste_page()
+        '/edit_profile': (context) => EditProfilePage()
       },
     );
   }
